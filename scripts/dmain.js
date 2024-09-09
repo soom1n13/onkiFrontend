@@ -54,6 +54,7 @@ if (hamMenu) {
         palletecont.style.display = 'flex';
         strokecont.style.display='flex';
         textinput.style.display = 'none';
+        imageinput.style.display = 'none';
 
         const canvas = document.getElementById('drawingCanvas');
         const ctx = canvas.getContext("2d");
@@ -180,6 +181,7 @@ if (hamMenu) {
         palletecont.style.display = 'flex';
         textinput.style.display = 'flex';
         strokecont.style.display='none';
+        imageinput.style.display = 'none';
 
 
         const buttons = [
