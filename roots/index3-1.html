@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>main</title>
+  
+    <link rel="stylesheet" href="../styles/dmain3-1.css">
+    
+</head>
+<body>
+
+  <div class="hammenu-container">
+        
+    <nav class="hamMenu" id="hamMenu">
+        <div class="div">
+            <div class="ellipse-8"></div>
+            <div class="userName">예원</div>
+            <div class="div3">님! 반가워요.</div>
+        </div>
+        <div class="profile" id="changepf" style="cursor: pointer;">
+            <div class="rectangle-17">내 프로필 보기</div>
+        </div>
+        <div class="line-6"></div>
+        <div class="menu5">일기장 나가기</div>
+        <div class="menu4" onclick="toEditDiary()"style="cursor: pointer;">일기장 정보 수정하기</div>
+        <div class="line-7"></div>
+        <div class="menu3">일기장 코드 복사하기</div>
+        <div class="line-8"></div>
+        <div class="toggle">
+            <div class="menu2">테마 설정</div>
+            <div class="toggle">
+                <div class="rectangle-21"></div>
+                <div class="ellipse-9"></div>
+            </div>
+        </div>
+        <div class="line-9"></div>
+        <div class="div11">
+            <div class="div12">알림 설정</div>
+            <div class="div13">
+            일기장이 업데이트 될 때마다
+            <br/>
+            이메일로 알려드려요.
+            </div>
+            <div class="div14">&gt;</div>
+        </div>
+    </nav>
+</div>
+
+
+
+
+    <div class="app-container">
+    <div class="uppart">
+        
+      <img src="../assets/onki.svg" class="onki"/> 
+      <img src="../assets/menu.svg" id="ham"/>
+    </div>
+
+
+    
+    <div class="diary-title">
+        <span class="title-main">고오양이🐈</span>
+        <span class="title-sub">의 일기</span>
+        <div class="diarypart">
+          <div class="diarybt">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path d="M8.5 1L2 9L8.5 15" stroke="#C2C2C2" stroke-width="2"/>
+            </svg>
+          </div>
+
+
+          <div id="imageContainer" style="position: relative; width: 320px; height: 228px;">
+            <canvas id="drawingCanvas" width="320" height="228" style="position: absolute; top: 0; left: 0; z-index: 2;"></canvas>
+          </div>
+          <input type="file" id="fileInput" style="display: none;" accept="image/*">
+
+
+          <div id="textContainer" style="position: relative; width: 320px; height: 228px;">
+            <canvas id="drawingCanvas" width="320" height="228" style="position: absolute; top: 0; left: 0; z-index: 1;"></canvas>
+        </div>
+        <input type="text" id="hiddenTextInput" style="display: none;" placeholder="텍스트를 입력하세요" maxlength="100" size="30">
+
+
+          <div class="diaryline"></div>
+          <div class="diarybbt">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path d="M1 1L7.5 9L1 15" stroke="#C2C2C2" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+  
+      <button class = "writebtcon" onClick="location.href='index.html'">다이어리 쓰기</button>
+      
+      <button class = "sharebutton">공유하기</button>
+      <button class = "collectbutton" onClick="location.href='collect.html'">모아보기</button>
+
+    <script>
+       function toggleMenu() {
+        const menu = document.getElementById('hamMenu');
+        const ham = document.getElementById('ham');
+        menu.classList.toggle('show');
+        if (menu.classList.contains('show')) {
+            menu.style.right = '0px';
+            ham.style.visibility = 'hidden';
+        } else {
+            menu.style.right = '-250px';
+            ham.style.visibility = 'visible';
+        }
+    }
+
+          document.getElementById('ham').addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleMenu();
+          });
+
+          document.addEventListener('click', function(event) {
+            const menu = document.getElementById('hamMenu');
+            if (!menu.contains(event.target) && menu.classList.contains('show')) {
+              toggleMenu();
+            }
+          });
+
+          // 메뉴 내부 클릭 시 이벤트 전파 방지
+          document.getElementById('hamMenu').addEventListener('click', function(event) {
+            event.stopPropagation();
+          });
+                  
+        
+        document.getElementById('changepf').addEventListener('click', function(event) {
+            window.location.href = 'editProfile.html';
+        });
+
+  //menu4 클릭 시 editDiary.html로 페이지 이동
+    function toEditDiary(){
+      window.location.href ="../roots/editDiary.html";
+  }
+
+    </script>
+
+
+    
+        
+    
+    
+    </body>
+</html>
