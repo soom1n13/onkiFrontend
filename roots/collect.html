@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>main</title>
+  
+    <link rel="stylesheet" href="../styles/collect.css">
+    
+</head>
+<body>
+
+  <div class="hammenu-container">
+        
+    <nav class="hamMenu" id="hamMenu">
+        <div class="div">
+            <div class="ellipse-8"></div>
+            <div class="userName">예원</div>
+            <div class="div3">님! 반가워요.</div>
+        </div>
+        <div class="profile" id="changepf" style="cursor: pointer;">
+            <div class="rectangle-17">내 프로필 보기</div>
+        </div>
+        <div class="line-6"></div>
+        <div class="menu5">일기장 나가기</div>
+        <div class="menu4" onclick="toEditDiary()"style="cursor: pointer;">일기장 정보 수정하기</div>
+        <div class="line-7"></div>
+        <div class="menu3">일기장 코드 복사하기</div>
+        <div class="line-8"></div>
+        <div class="toggle">
+            <div class="menu2">테마 설정</div>
+            <div class="toggle">
+                <div class="rectangle-21"></div>
+                <div class="ellipse-9"></div>
+            </div>
+        </div>
+        <div class="line-9"></div>
+        <div class="div11">
+            <div class="div12">알림 설정</div>
+            <div class="div13">
+            일기장이 업데이트 될 때마다
+            <br/>
+            이메일로 알려드려요.
+            </div>
+            <div class="div14">&gt;</div>
+        </div>
+    </nav>
+</div>
+
+    <div class="uppart">    
+      <img src="../assets/onki.svg" class="onki"/> 
+      <img src="../assets/menu.svg" id="ham"/>
+
+      
+      <button class = "sharebutton" onClick="location.href='index3-1.html'">공유하기</button>
+      <button class = "collectbutton" >모아보기</button>
+        
+    </div>
+    <body>
+        <form action="collectConfirm.html" method="GET" enctype="multipart/form-data" class="upload-form">
+            <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="submitFormWithPreview(event)">
+            <span id="fileLabel">일상 공유하기</span>
+        </form>
+      <div id="columns"></div>
+
+    </body>
+
+    <script src="../scripts/collect.js" defer></script>
+    <script>
+        
+       function toggleMenu() {
+        const menu = document.getElementById('hamMenu');
+        const ham = document.getElementById('ham');
+        menu.classList.toggle('show');
+        if (menu.classList.contains('show')) {
+            menu.style.right = '0px';
+            ham.style.visibility = 'hidden';
+        } else {
+            menu.style.right = '-250px';
+            ham.style.visibility = 'visible';
+        }
+    }
+
+          document.getElementById('ham').addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleMenu();
+          });
+
+          document.addEventListener('click', function(event) {
+            const menu = document.getElementById('hamMenu');
+            if (!menu.contains(event.target) && menu.classList.contains('show')) {
+              toggleMenu();
+            }
+          });
+
+          // 메뉴 내부 클릭 시 이벤트 전파 방지
+          document.getElementById('hamMenu').addEventListener('click', function(event) {
+            event.stopPropagation();
+          });
+                  
+        
+        document.getElementById('changepf').addEventListener('click', function(event) {
+            window.location.href = 'editProfile.html';
+        });
+
+  //menu4 클릭 시 editDiary.html로 페이지 이동
+    function toEditDiary(){
+      window.location.href ="../roots/editDiary.html";
+  }
+
+    </script>
+    </script>
+</html>
