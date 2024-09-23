@@ -1,0 +1,560 @@
+@font-face {
+    font-family: 'Friem-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friem Regular'), url('friem-regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'MapoBackpacking-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoBackpackingA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css");
+  
+  @font-face {
+    font-family: 'SokchoBadaDotum';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaDotum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @media screen and (max-width: 430px) {
+   
+  }
+  
+  body {
+    width: 100%;
+    max-width: 100vw; /* 화면 너비를 넘지 않도록 설정 */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8EF;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  
+  
+  /*햄버거 메뉴*/
+  .hammenu-container {
+    position: relative;
+  }
+  
+  .menu-button {
+    font-size: 24px;
+  }
+  
+  .hamMenu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* 메뉴를 화면 밖으로 위치시킴 */
+    width: 250px;
+    height: 100vh; /* 화면의 전체 높이 */
+    background-color: #fff8ef;
+    border-radius: 20px 0px 0px 20px;
+    overflow: auto; 
+    transition: right 0.3s ease;
+    box-shadow: -13px 0px 13px 0px rgba(0, 0, 0, 0.09), -28px 0px 17px 0px rgba(0, 0, 0, 0.05);
+  }
+  
+  .frame-16,
+  .frame-16 * {
+  box-sizing: border-box;
+  }
+  .frame-16 {
+  border-radius: 20px 0px 0px 20px;
+  padding: 228px 19px 228px 19px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  
+  }
+  .div {
+  width: 182px;
+  height: 55px;
+  position: static;
+  }
+  .ellipse-8 {
+  background: var(--blue, #4535ff);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 29px;
+  top: 228.5px;
+  }
+  .userName {
+  color: #000000;
+  text-align: left;
+  font-family: "SokchoBadaDotum", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  position: absolute;
+  left: 101px;
+  top: 246.5px;
+  }
+  .div3 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 145px;
+  top: 250.5px;
+  }
+  .profile {
+  width: 110px;
+  height: 28px;
+  position: static;
+  }
+  .rectangle-17 {
+  background: #4535ff;
+  border-radius: 20px;
+  width: 110px;
+  height: 28px;
+  position: absolute;
+  left: 72px;
+  top: 301.5px;
+  
+  color: #ffffff;
+  text-align: center;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  padding-top: 10px;
+  }
+  .div5 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 93px;
+  top: 307.5px;
+  }
+  .line-6 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 211px;
+  height: 0px;
+  position: absolute;
+  left: 19px;
+  top: 588.5px;
+  }
+  .menu5 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 29px;
+  top: 603.5px;
+  }
+  .menu4 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 29px;
+  top: 553.5px;
+  }
+  .line-7 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 211px;
+  height: 0px;
+  position: absolute;
+  left: 19px;
+  top: 538.5px;
+  }
+  .menu3 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 29px;
+  top: 503.5px;
+  }
+  .line-8 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 211px;
+  height: 0px;
+  position: absolute;
+  left: 19px;
+  top: 488.5px;
+  }
+  .toggle {
+  width: 192px;
+  height: 23px;
+  position: static;
+  }
+  .menu2 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 29px;
+  top: 453.5px;
+  }
+  .line-9 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 211px;
+  height: 0px;
+  position: absolute;
+  left: 19px;
+  top: 438.5px;
+  }
+  .div11 {
+  width: 190px;
+  height: 53px;
+  position: static;
+  }
+  .div12 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 29px;
+  top: 370.5px;
+  }
+  .div13 {
+  color: #000000;
+  text-align: left;
+  font-family: "SuitVariable-Medium", sans-serif;
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  position: absolute;
+  left: 29px;
+  top: 393.5px;
+  }
+  .div14 {
+  color: #000000;
+  text-align: center;
+  font-family: "SuitVariable-Bold", sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  position: absolute;
+  left: 209px;
+  top: 371.5px;
+  }
+  
+  
+  /* 메뉴가 보일 때 적용되는 클래스 */
+  .hamMenu.show {
+    right: 0; /* 화면 안으로 이동 */
+  }
+  
+  /*햄버거 끝*/
+  
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* 
+  .uppart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 10vh;
+  }
+  
+  
+  .logo-container {
+    
+    display: flex;
+    margin-left: 40px;
+    width: 100%;
+    left: calc(50% - 146.5px);  
+  }
+  
+  
+  
+  
+  .menu-container {
+    
+    margin-right: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+  } */
+  
+  img.onki {
+    position: absolute; 
+    top: 68px;       
+    width: 62px;       
+    height: auto;      
+    z-index: 10;     
+    left: calc(50% - 146.5px);  
+  }
+  #ham {
+    position: absolute; 
+    top: 68px;       
+    width: 30px;       
+    height: auto;      
+    z-index: 10;     
+    left: calc(50% + 120.5px);  
+  }
+  
+  .container {
+    justify-content: center;
+    align-items: center;
+    left: calc(50% - 146.5px);  
+    position: relative;
+    width: 80px; /* Adjust based on your logo size */
+    height: 30px; /* Adjust based on your logo size */
+  }
+  
+  .letter {
+    position: absolute;
+    font-size: 25px;
+    font-family: Friem, sans-serif;
+    font-weight: 400;
+  }
+
+  
+     .sharebutton {
+      background:var(--green, #229c5a);
+      border-radius: 7px 0px 0px 7px;
+      width: 54px;
+      height: 26px;
+      border: none;
+      position: absolute; /* relative 대신 absolute */
+      top: 70px;
+      left: calc(50% - 48px); /* 부모 요소 기준으로 중앙에 배치 */
+      color: #ffffff;
+      text-align: left;
+      font-family: "suit";
+      font-size: 12px;
+      font-weight: var(---font-weight, 400);
+  }
+  .collectbutton {
+    background:  #197141;
+    border-radius: 0px 7px 7px 0px;
+    width: 54px;
+    height: 26px;
+    border: none;
+    position: absolute; /* relative 대신 absolute */
+    top: 70px;
+    left: calc(50% + 5px); /* 부모 요소 기준으로 중앙에 배치 */
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-family: "suit";
+    font-size: var(---font-size, 12px);
+    font-weight: var(---font-weight, 400);
+  }
+    
+#columns {
+    display: flex;
+    flex-wrap: wrap; /* 여러 행으로 나눔 */
+    justify-content: space-between; /* 좌우 간격을 고르게 분배 */
+    margin-top: 50px;
+    margin-left: 3%;
+    margin-right: 3%;
+    
+  }
+  
+  #columns figure {
+    flex: 0 1 48%; /* 2열로 나란히 배치 */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0 0 15px 0; /* 아래쪽 여백 추가 */
+    padding: 0px;
+    border-color: white;
+    border-width: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #columns figure img {
+    width: 100%; /* 이미지를 부모 요소에 맞게 채움 */
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경을 어둡게 */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* 다른 요소들 위에 표시 */
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .popup img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .popup-buttons {
+    margin-top: 20px;
+  }
+  
+  .popup-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#previewImage {
+    width: 250px; /* 이미지의 가로 크기 */
+    height: 200px; /* 이미지의 세로 크기 */
+    object-fit: cover; /* 이미지를 고정 크기로 자르기 */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: 300px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.upload-button {
+    background-color: #197141;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-button:hover {
+    background-color: #145a30;
+}
+
+.submit{
+  font-family: 'suit';
+  font-weight: 800;
+  position: absolute;
+  top: 550px;
+  left: calc(50% - 125px);
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--Green, #229C5A);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+  color: white;
+}
+
+/* #chooseFile{
+    font-family: 'suit';
+    font-weight: 800;
+    position: absolute;
+    top: 550px;
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    background: var(--Green, #229C5A);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    color: white;
+  } */
+
+  .upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 중앙 정렬 */
+
+    padding: 10px 20px;
+    box-shadow: 8px 8px 20px 0px rgba(201, 199, 199, 0.25);
+    width: fit-content; /* 콘텐츠에 맞는 너비 */
+    margin: 20px auto; /* 중앙 정렬 */
+    cursor: pointer; /* 클릭 가능 표시 */
+    position: relative; /* 자식 요소의 절대 위치 기준 */
+    top: 800px;
+    width: 339px;
+    height:35px;
+    border-radius: 10px;
+    background: var(--Green, #229C5A);
+}
+
+#chooseFile {
+    opacity: 0; /* 투명하게 만들어 보이지 않음 */
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 상자 전체를 클릭 가능하게 */
+    top: 0;
+    left: 0;
+    cursor: pointer; /* 클릭 가능한 커서 표시 */
+}
+
+#fileLabel {
+
+    font-family: 'suit';
+    font-weight: 72px;
+    font-size: 13px;
+
+    color: white; /* 텍스트 색상 */
+    z-index: 1; /* 텍스트가 파일 선택보다 위에 위치 */
+}
